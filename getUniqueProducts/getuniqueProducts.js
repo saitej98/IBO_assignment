@@ -26,15 +26,15 @@ const listOfProducts = [
   },
 ];
 
-function getUniquePrducts(listOfProducts) {
+function getUniquePrducts(product) {
   let obj = {};
-  let L = listOfProducts.length;
+  let L = product.length;
 
   for (let i = 0; i < L; i++) {
-    if (obj[listOfProducts[i].productName] === undefined) {
-      obj[listOfProducts[i].productName] = listOfProducts[i];
+    if (obj[product[i].productName] === undefined) {
+      obj[product[i].productName] = product[i];
     } else {
-      obj[listOfProducts[i].productName].quantity += listOfProducts[i].quantity;
+      obj[product[i].productName].quantity += product[i].quantity;
     }
   }
   let UniqueObj = Object.values(obj);
